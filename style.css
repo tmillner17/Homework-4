@@ -1,0 +1,22 @@
+.text{
+    color: red;
+    padding: 1%;
+}   
+#header{
+    color: blue;
+    text-align: center;
+}
+#body{
+    background-color: black;
+}
+
+.crystal {
+    width: 150px;
+    height:150px;
+    float: left;
+    padding: 1%;
+}
+.scores {
+    position: absolute;
+    bottom: 25%;
+}
