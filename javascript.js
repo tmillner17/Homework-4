@@ -1,28 +1,39 @@
 function randomNumber() {
     return (Math.floor(Math.random()*120)+19)
 }
+function randomCrystal() {
+    return  Math.floor(Math.random()*(12 - 1 + 1) + 1)
+}
 
 // document.getElementById('your-goal').textContent = randomNumber()
 $('#your-goal').text("Your Goal: " + randomNumber())
-let blueCrystal = '5'
-let crystal = '1'
-let diamond = '20'
-let purpleDiamond = '10'
-let yourTotal = ''
+let blueCrystal = randomCrystal()
+let crystal = randomCrystal()
+let diamond = randomCrystal()
+let purpleDiamond = randomCrystal()
+let yourTotal = 0
 function setEventListener() {
     $("#blue-crystal").on("click", function(){
-        $('#your-total').text('Your Total:' + blueCrystal)
+        yourTotal += blueCrystal
+        $('#your-total').text('Your Total:' + yourTotal)
     })
     $('#crystal').on("click", function(){
-        $('#your-total').text('Your Total:' + crystal)
+        yourTotal += crystal
+        $('#your-total').text('Your Total:' + yourTotal)
     })
     $('#diamond').on("click", function(){
-        $('#your-total').text('Your Total:' + diamond)
+        yourTotal += diamond
+        $('#your-total').text('Your Total:' + yourTotal)
     })
     $('#purple-crystal').on("click", function(){
-        $('#your-total').text('Your Total:' + purpleDiamond)
+        yourTotal += purpleDiamond
+        $('#your-total').text('Your Total:' + yourTotal)
     })
 }
 setEventListener()
 
-if (yourTotal === randomNumber)
+function youWin() {
+    if (yourTotal > randomNumber) {
+        
+    }
+}
